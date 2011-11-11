@@ -1,0 +1,156 @@
+/*http://colorschemedesigner.com/#3G61Tw0w0w0w0*/
+input.registerFormError {
+	border: solid red
+}
+
+body {
+	background-color: #104BA9;
+	font-family: Delicious, sans-serif;
+	font-size:16px;
+	#color:#FF6700;
+	color:#FFFFFF;
+}
+
+img.emot{
+	height:20px;
+}
+
+a {
+	color: #FFA200;
+}
+
+a:HOVER {
+	color: #BF8B30;
+}
+
+a:VISITED {
+	color: #A66A00;
+}
+
+div.pudelko {
+	border: 2px solid;
+	border-radius: 10px;
+	width: 300px;
+	height: 140px;
+	margin: auto;
+	text-align: center;
+	background-color: #284A7E;
+}
+
+div.srodek {
+	margin: auto;
+	padding: auto;
+}
+
+
+div.chatbox {
+	margin: auto;
+	background-color: #284A7E;
+	border-color: black;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 5px 5px 5px black;
+	-webkit-box-shadow: 5px 5px 5px black;
+	box-shadow: 5px 5px 5px black;
+	width: 700px;
+	height: 680px;
+}
+
+div.chatarea {
+	overflow: auto;
+	width: 550px;
+	height: 630px;
+	float: left;
+	#background-color: red;
+}
+
+div.chatusers {
+	overflow: auto;
+	width: 150px;
+	height: 630px;
+	float: right;
+	#background-color: green;
+}
+
+div.inputarea {
+	width: 700px;
+	height: 50px;
+	#background-color: yellow;
+	float: left;
+}
+
+form.createmessage {
+	margin:1px;
+	margin-bottom:2px;
+	float: left;
+}
+
+form.refresh {
+	float: right;
+}
+/*CHATAREA.PHP*/
+div.post{
+	width: 535px;
+	height:65px;
+	margin:auto;
+	margin-top:5px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 3px 3px 3px black;
+	-webkit-box-shadow: 3px 3px 3px black;
+	box-shadow: 3px 3px 3px black;
+	background-color:#052D6E;
+	padding:0px;
+}
+div.postAuthor{
+	float:left;
+	width:85px;
+	margin:0px;
+}
+div.postMessage{
+	width:450px;
+	height:50px;
+	float:left;
+	#background-color:red;
+	margin:0px;
+}
+div.postOther{
+	float:left;
+	height:15px;
+	margin:0px;
+	padding:0px;
+}
+p.postOtherText{
+	font-size:10px;
+	margin:0px;
+	padding:0px;
+}
+button.noteLink{
+	text-align:center;
+	font-size: 8px;
+	height:15px;
+}
+
+div.users{
+	width: 140px;
+	height:20px;
+	margin:auto;
+	margin-top:5px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 3px 3px 3px black;
+	-webkit-box-shadow: 3px 3px 3px black;
+	box-shadow: 3px 3px 3px black;
+	background-color:#052D6E;
+}
+div.fullSizePost{
+	margin:5px;
+	width: 530px;
+	height: 600px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 3px 3px 3px black;
+	-webkit-box-shadow: 3px 3px 3px black;
+	box-shadow: 3px 3px 3px black;
+	overflow:auto;
+}
