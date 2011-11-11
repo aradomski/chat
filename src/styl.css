@@ -45,6 +45,7 @@ div.srodek {
 
 div.chatbox {
 	margin: auto;
+	margin-bottom:5px;
 	background-color: #284A7E;
 	border-color: black;
 	-moz-border-radius: 5px;
@@ -154,3 +155,19 @@ div.fullSizePost{
 	box-shadow: 3px 3px 3px black;
 	overflow:auto;
 }
+
+
+.footer {
+margin-top:1px;
+background-color: #447BD4;
+height: 10px;
+text-align: right;
+font-size:10px;
+padding-top: 3px;
+width: 100%;
+position:fixed;
+left: 0px;
+bottom: 0px;
+}
+
+

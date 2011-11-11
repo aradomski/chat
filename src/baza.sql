@@ -18,11 +18,11 @@ tresc text,
 Primary Key (post_id), 
 Foreign Key (user_id) references users(user_id));
 /*PSQL*/
-CREATE TABLE users (
+/*CREATE TABLE users (
 user_id       serial Primary Key,
 login         varchar(30),
 olsah         varchar(35),
-email		varchar(30),
+email         varchar(30),
 registrationdate  date,
 status            int
 );
@@ -30,6 +30,6 @@ CREATE TABLE posts
 (post_id serial Primary Key,
 date date, 
 time time,
-user_id integer Foreign Key references users(user_id), 
-tresc text,
-);
+user_id integer  references users(user_id),
+tresc text
+);*/

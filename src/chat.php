@@ -36,10 +36,10 @@ Nie jestes zalogowany
 		</form>
 	</div>
 </div>
-<br />
 <center>
 	<a href="logout.php">Wyloguj mnie!</a>
 </center>
+ <?php include 'footer.php'; ?>
 </body>
 </html>
 <?php

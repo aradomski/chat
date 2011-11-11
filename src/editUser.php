@@ -44,7 +44,7 @@ Nie jestes zalogowany
 	Login: <input type="text" value="<?php echo $login; ?>" name="login" />
 	Email: <input type="email" value="<?php echo $email; ?>" name="email" />
 	Status: <select name="userStatus">
-		<!-- option value="0"<?php #if($userStatus ==0){echo "selected='selected'";}?>>banned</option -->
+		<option value="0"<?php if($userStatus ==0){echo "selected='selected'";}?>>banned</option >
 		<option value="1"<?php if($userStatus ==1){echo "selected='selected'";}?>>admin</option>
 		<option value="2"<?php if($userStatus ==2){echo "selected='selected'";}?>>moderator</option>
 		<option value="3"<?php if($userStatus ==3){echo "selected='selected'";}?>>user</option>
@@ -53,6 +53,7 @@ Nie jestes zalogowany
 	Reset password?: <input type="checkbox" name="reset"/>
 	<input type="submit" value="uaktualnij" name="submit" />
 </form>
+<?php include 'footer.php'; ?>
 </body>
 </html>
 

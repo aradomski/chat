@@ -34,11 +34,12 @@ Nie jestes zalogowany
 </head>
 <form action="editPost.php" method="post">
 	<textarea rows="30" cols="70" name="tresc"><?php echo $tresc; ?></textarea>
-	<br /> <input type="hidden" name="post_id"
-		value="<?php echo $post_id; ?>" /> <input type="submit"
-		value="uaktualnij" name="submit" />
+	<br /> <input type="hidden" name="post_id"	value="<?php echo $post_id; ?>" /> 
+	A może usunąć? <input type="checkbox" name="delete" />
+		<input type="submit" value="uaktualnij" name="submit" />
 </form>
 </body>
+<?php include 'footer.php'; ?>
 </html>
 <?php
 }else{
@@ -47,8 +48,13 @@ Nie jestes zalogowany
 	$godziny = date("H:i:s", $date);
 	
 	 $tresc = addslashes($_POST['tresc']);
+	 $delete = addslashes($_POST['delete']);
 	 $post_id = addslashes($_POST['post_id']);
+	 if($delete =="on"){
+		 $sql = "DELETE FROM posts WHERE post_id='$post_id'";
+	 }else{
 	$sql = "UPDATE posts SET tresc='$tresc', date='$dni', time='$godziny' WHERE post_id='$post_id'";
+	}
 	require_once 'connect.php';
 	$db= connect();
 	$result =$db->query($sql);

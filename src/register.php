@@ -73,7 +73,7 @@ if(strlen($login) ==0 || strlen($email)==0  ||  strlen($password)==0 || strlen($
 		</ul>
 		<input type="submit" name="submit" value="wyslij!" />
 	</form>
-
+ <?php include 'footer.php'; ?>
 </body>
 </html>
 

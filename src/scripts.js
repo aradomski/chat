@@ -1,4 +1,4 @@
-var refreshId = setInterval('refresh()', 10000);
+var refreshId = setInterval('refresh()', 3000);
 
 function refresh() {
 	//$('#chatarea').fadeOut("slow").load('chatArea.php').fadeIn("slow");
@@ -20,6 +20,6 @@ function back(){
 	  refreshId = setInterval(function() {
       $("#chatarea").load('chatArea.php');
       $('#chatusers').load('recentActive.php');
-   }, 5000);
+   }, 3000);
 }
 

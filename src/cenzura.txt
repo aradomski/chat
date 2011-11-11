@@ -1,1 +1,3 @@
-kurwa;****
+kurwa;ladacznica
+pierdole;chędożę
+pierdolić;chędożyć
