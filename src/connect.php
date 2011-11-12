@@ -1,8 +1,8 @@
 <?php
 function connect(){
 	try {
-		//$db = new PDO("pgsql:dbname=aradomski;host=localhost", "aradomski", "186407" );
-		$db = new PDO ("mysql:dbname=Zad2;host=localhost","root","tajnehaslo");
+		//$db = new PDO("pgsql:dbname=aradomski;host=localhost", "aradomski", "" );
+		$db = new PDO ("mysql:dbname=Zad2;host=localhost","root","");
 		$db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		//echo "PDO connection object created <br />";
 		return $db;
