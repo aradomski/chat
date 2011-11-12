@@ -2,10 +2,10 @@
 $login = htmlspecialchars($_POST['login']);
 $email = htmlspecialchars($_POST['email']);
 if(strlen($_POST['password'])>0 && strlen($_POST['password2'])>0){
-	//$password = md5(htmlspecialchars($_POST['password']));
-	//$password2 =md5(htmlspecialchars($_POST['password2']));
-	$password = htmlspecialchars($_POST['password']);
-	$password2 =htmlspecialchars($_POST['password2']);
+	$password = md5(htmlspecialchars($_POST['password']));
+	$password2 =md5(htmlspecialchars($_POST['password2']));
+	//$password = htmlspecialchars($_POST['password']);
+	//$password2 =htmlspecialchars($_POST['password2']);
 }
 $submit = htmlspecialchars($_POST['submit']);
 //echo strlen($login);echo strlen($email); echo strlen($password); echo strlen($password2);

@@ -1,7 +1,7 @@
 <?php
 $login = htmlspecialchars($_POST['login']);
-//$pass = md5(htmlspecialchars($_POST['pass']));
-$pass = htmlspecialchars($_POST['pass']);
+$pass = md5(htmlspecialchars($_POST['pass']));
+//$pass = htmlspecialchars($_POST['pass']);
 if(strlen($login)==0 || strlen(htmlspecialchars($_POST['pass'])) ==0){
 	include 'redirect.php';
 	echo "Nie wypelniles wszystkich pol!";
