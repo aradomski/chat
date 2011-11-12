@@ -153,9 +153,14 @@ div.fullSizePost{
 	-moz-box-shadow: 3px 3px 3px black;
 	-webkit-box-shadow: 3px 3px 3px black;
 	box-shadow: 3px 3px 3px black;
-	overflow:auto;
+	overflow-y:auto;
+	#overflow-x: hidden;
+	max-width:530px;
 }
-
+pre.fullPost{
+	width: 515px;
+	white-space: pre-wrap;;
+}
 
 .footer {
 margin-top:1px;

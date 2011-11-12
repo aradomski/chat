@@ -2,3 +2,4 @@
 :sciana:;<img src="emotes/sciana.gif" alt="emot" class="emot" />
 :mrug:;<img src="emotes/mruga.gif" alt="emot" class="emot" />
 ??;<img src="emotes/pytajnik.gif" alt="emot" class="emot" />
+:D;<img src="emotes/zeby.gif" alt="emot" class="emot" />

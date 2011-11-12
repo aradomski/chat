@@ -27,7 +27,7 @@ Nie jestes zalogowany
 	<div class="chatusers" id="chatusers"><?php include 'recentActive.php';?></div>
 	<div class="inputarea">
 		<form action="sendMessage.php" method="post" class="createmessage">
-			<textarea id="message" name="message" rows="2" cols="40">Tu wpisz wiadomosc</textarea>
+			<textarea id="message" name="message" rows="2" cols="40"  onKeyPress="submit()"></textarea>
 			<!-- input type="text" id="message" name="message"value="Tu wpisz wiadomosc" / --> 	
 				<input type="submit" name="submit" value="Wyslij!" />
 		</form>

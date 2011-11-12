@@ -21,7 +21,7 @@ Nie jestes zalogowany
 	require_once 'connect.php';
 	$db= connect();
 	//$sql ="SELECT * FROM `posts` WHERE  posts.date='$dni' AND posts.time>'$godziny' ORDER BY  posts.date, posts.time";
-	$sql ="SELECT login,date,time,post_id,tresc FROM `posts` INNER JOIN users ON users.user_id = posts.user_id WHERE  posts.date='$dni' AND posts.time>'$godziny' ORDER BY  posts.date, posts.time";
+	$sql ="SELECT login,date,time,post_id,tresc FROM `posts` INNER JOIN users ON users.user_id = posts.user_id WHERE  posts.date='$dni' AND posts.time>'$godziny' ORDER BY  posts.date, posts.time DESC";
 	?>
 
 <?php

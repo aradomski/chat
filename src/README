@@ -1,0 +1,8 @@
+Przepraszam za przekleństwa z pliku cenzura.txt :)
+
+Odpalanie:
+W pliku baza.sql są polecenia dla MySQL do tworzenia tabel. Są również dla PostgreSQL ale z powodu braku jakichkolwiek komunikatów o błędach na sigmie nie są one poprawione tak żeby działały poprawnie z aplikacja.
+W pliku connect.php ustawiamy parametry połączenia. Następnie odpalamy wypelnijBaze.php ktore to wypełnia nam bazę. Aplikacja już jest gotowa do użytku.
+Na starcie mamy użytkowników: admin, mod, user, banned każdy ma takie samo hasło: password. Nazwy użytkowników zdradzają ich role.
+Redirect można zmienić w pliku redirect.php
+

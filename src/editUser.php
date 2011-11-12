@@ -21,7 +21,7 @@ Nie jestes zalogowany
 
 <?php
 }else {
-	$login = addslashes($_GET['login']);
+	$login = htmlspecialchars($_GET['login']);
 	require_once 'connect.php';
 	$db= connect();
 	$sql = "SELECT * FROM users WHERE login='$login'";
@@ -30,7 +30,7 @@ Nie jestes zalogowany
 		$email = $row['email'];
 		$userStatus = $row['status'];
 	}
-	if(strlen(addslashes($_POST['submit']))==0){
+	if(strlen(htmlspecialchars($_POST['submit']))==0){
 		?>
 <html>
 <head>
@@ -53,6 +53,20 @@ Nie jestes zalogowany
 	Reset password?: <input type="checkbox" name="reset"/>
 	<input type="submit" value="uaktualnij" name="submit" />
 </form>
+
+<br />
+
+<?php
+$sql = "SELECT * FROM users";
+	foreach ($db->query($sql) as $row) {
+		$login = $row['login'];
+		$id = $row['user_id'];
+		$email = $row['email'];
+		$userStatus = $row['status'];
+		?> <a href="editUser?login=<?php echo $login;?>"><?php echo $login;?></a><br /><?php
+	} ?>
+
+
 <?php include 'footer.php'; ?>
 </body>
 </html>
@@ -60,11 +74,11 @@ Nie jestes zalogowany
 
 <?php  
 }else{
-	 $login = addslashes($_POST['login']);
-	 $email = addslashes($_POST['email']);
-	 $userStatus = addslashes($_POST['userStatus']);
-	 $id = addslashes($_POST['id']);
-	 $reset = addslashes($_POST['reset']);
+	 $login = htmlspecialchars($_POST['login']);
+	 $email = htmlspecialchars($_POST['email']);
+	 $userStatus = htmlspecialchars($_POST['userStatus']);
+	 $id = htmlspecialchars($_POST['id']);
+	 $reset = htmlspecialchars($_POST['reset']);
 	 require_once 'connect.php';
 	$db= connect();
 	//$sql = "UPDATE books  SET title=?, author=?  WHERE id=?"; 

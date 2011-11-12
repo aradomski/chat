@@ -13,7 +13,7 @@ Nie jestes zalogowany
 <a href="/">Powrot</a>
 <?php
 }else {
-$post_id = addslashes($_GET['post_id']);
+$post_id = htmlspecialchars($_GET['post_id']);
 require_once 'connect.php';
 	$db= connect();
 $sql ="SELECT * FROM `posts` WHERE  post_id='$post_id'";
@@ -31,7 +31,7 @@ foreach ($db->query($sql) as $row) {
 	$message = emots($message);
 	?>
 	<div class="fullSizePost">
-	<?php echo $message;?>
+	<pre class="fullPost"><?php echo $message;?></pre>
 	<button onclick="back()">Powrót</button>
 	<?php if($userStatus ==1 || $userStatus ==2){
 	?><a href="editPost.php?post_id=<?php echo $post_id; ?>">Edytuj</a><?php } ?>

@@ -18,8 +18,8 @@ Nie jestes zalogowany
 <br />
 <a href="chat.php">Powrot</a>
 <?php
-}else {if(strlen(addslashes($_POST['submit']))==0){
-	$post_id = addslashes($_GET['post_id']);
+}else {if(strlen(htmlspecialchars($_POST['submit']))==0){
+	$post_id = htmlspecialchars($_GET['post_id']);
 	$sql2 = "SELECT tresc FROM posts WHERE post_id='$post_id'";
 	foreach ($db->query($sql2) as $row) {
 		$tresc = $row['tresc'];
@@ -47,9 +47,9 @@ Nie jestes zalogowany
 	$dni = date("Y-m-d", $date);
 	$godziny = date("H:i:s", $date);
 	
-	 $tresc = addslashes($_POST['tresc']);
-	 $delete = addslashes($_POST['delete']);
-	 $post_id = addslashes($_POST['post_id']);
+	 $tresc = htmlspecialchars($_POST['tresc']);
+	 $delete = htmlspecialchars($_POST['delete']);
+	 $post_id = htmlspecialchars($_POST['post_id']);
 	 if($delete =="on"){
 		 $sql = "DELETE FROM posts WHERE post_id='$post_id'";
 	 }else{

@@ -19,7 +19,8 @@ echo  $_COOKIE['uid'];?>
 
 <?php
 }else {
-	$message = addslashes($_POST['message']);
+	$message = htmlspecialchars($_POST['message']);
+	//$message = htmlspecialchars($_POST['message']);
 	//include 'replacer.php';
 	//echo $message;
 	//$message = censor($message);

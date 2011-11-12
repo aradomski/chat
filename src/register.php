@@ -1,11 +1,13 @@
 <?php
-$login = addslashes($_POST['login']);
-$email = addslashes($_POST['email']);
+$login = htmlspecialchars($_POST['login']);
+$email = htmlspecialchars($_POST['email']);
 if(strlen($_POST['password'])>0 && strlen($_POST['password2'])>0){
-	$password = md5(addslashes($_POST['password']));
-	$password2 =md5(addslashes($_POST['password2']));
+	//$password = md5(htmlspecialchars($_POST['password']));
+	//$password2 =md5(htmlspecialchars($_POST['password2']));
+	$password = htmlspecialchars($_POST['password']);
+	$password2 =htmlspecialchars($_POST['password2']);
 }
-$submit = addslashes($_POST['submit']);
+$submit = htmlspecialchars($_POST['submit']);
 //echo strlen($login);echo strlen($email); echo strlen($password); echo strlen($password2);
 $i =0;
 $j=0;
@@ -60,7 +62,7 @@ if(strlen($login) ==0 || strlen($email)==0  ||  strlen($password)==0 || strlen($
 			</li>
 <?php
 		}?>
-			<?php if($password === $password2 && strlen(addslashes($_POST['password']))<6 && strlen($submit)==0){?>
+			<?php if($password === $password2 && strlen(htmlspecialchars($_POST['password']))<6 && strlen($submit)==0){?>
 			<li>Password:<input type="password" name="password" />
 			</li>
 			<li>Retype password:<input type="password" name="password2" />
