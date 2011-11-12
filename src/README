@@ -6,3 +6,21 @@ W pliku connect.php ustawiamy parametry połączenia. Następnie odpalamy wypeln
 Na starcie mamy użytkowników: admin, mod, user, banned każdy ma takie samo hasło: password. Nazwy użytkowników zdradzają ich role.
 Redirect można zmienić w pliku redirect.php
 
+/*Dla gita budowa pliku connect.php*/
+
+<?php
+function connect(){
+	try {
+		$db = new PDO ("mysql:dbname=BAZA;host=HOST","LOGIN","HASLO");
+		$db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		//echo "PDO connection object created <br />";
+		return $db;
+	}
+	catch(PDOException $e)
+	{
+		echo $e->getMessage();
+		include 'redirect.php';
+		echo "blad bazy danych";
+		return false;
+	}
+}?>
